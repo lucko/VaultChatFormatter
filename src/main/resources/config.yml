@@ -1,0 +1,17 @@
+# VaultChatFormatter Configuration
+#
+# To reload this configuration file, run `/vaultchatformatter reload`.
+# (and make sure you have the 'vaultchatformatter.reload' permission)
+
+# The chat format.
+#
+# The following placeholders can be used in the format, and will be replaced
+# by their corresponding value when the format is applied.
+#
+# {prefix} ==> the players prefix
+# {suffix} ==> the players suffix
+# {name} ==> the players username (displayname)
+# {message} ==> the message being sent by the player
+#
+# Standard Minecraft color codes can be used in the format.
+format: "<{prefix}{name}{suffix}> {message}"

@@ -1,0 +1,12 @@
+name: ${project.name}
+version: ${project.version}
+main: me.lucko.chatformatter.ChatFormatterPlugin
+description: ${project.description}
+author: Luck
+depend: [Vault]
+
+commands:
+  vaultchatformatter:
+    description: Reload the configuration
+    permission: vaultchatformatter.reload
+    usage: "Did you mean to run '/vaultchatformatter reload'?"
