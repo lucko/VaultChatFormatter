@@ -19,6 +19,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class ChatFormatterPlugin extends JavaPlugin implements Listener {
 
     private static final String NAME_PLACEHOLDER = "{name}";
+    private static final String DISPLAYNAME_PLACEHOLDER = "{displayname}";
     private static final String MESSAGE_PLACEHOLDER = "{message}";
     private static final String PREFIX_PLACEHOLDER = "{prefix}";
     private static final String SUFFIX_PLACEHOLDER = "{suffix}";
@@ -37,7 +38,7 @@ public class ChatFormatterPlugin extends JavaPlugin implements Listener {
 
     private void reloadConfigValues() {
         format = colorize(getConfig().getString("format", DEFAULT_FORMAT)
-                .replace(NAME_PLACEHOLDER, "%1$s")
+                .replace(DISPLAYNAME_PLACEHOLDER, "%1$s")
                 .replace(MESSAGE_PLACEHOLDER, "%2$s"));
     }
 
@@ -90,6 +91,7 @@ public class ChatFormatterPlugin extends JavaPlugin implements Listener {
         if (vaultChat != null && format.contains(SUFFIX_PLACEHOLDER)) {
             format = format.replace(SUFFIX_PLACEHOLDER, colorize(vaultChat.getPlayerSuffix(e.getPlayer())));
         }
+        format = format.replace(NAME_PLACEHOLDER, e.getPlayer().getName());
         e.setFormat(format);
     }
 

@@ -10,7 +10,8 @@
 #
 # {prefix} ==> the players prefix
 # {suffix} ==> the players suffix
-# {name} ==> the players username (displayname)
+# {name} ==> the players name
+# {displayname} ==> the players displayname
 # {message} ==> the message being sent by the player
 #
 # Standard Minecraft color codes can be used in the format.
