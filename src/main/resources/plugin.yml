@@ -4,6 +4,7 @@ main: me.lucko.chatformatter.ChatFormatterPlugin
 description: ${project.description}
 author: Luck
 depend: [Vault]
+api-version: 1.13
 
 commands:
   vaultchatformatter:
